@@ -15,5 +15,5 @@ It consists of the following files:
   fig1.eps           a figure used in the sample paper
 
   llncsdoc.pdf       the documentation of the class (PDF version)
-
-     splncs04.bst       current LNCS BibTeX style with alphabetic sorting
+  
+  splncs04.bst       current LNCS BibTeX style with alphabetic sorting
