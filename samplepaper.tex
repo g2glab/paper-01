@@ -58,6 +58,11 @@ Increasing amounts of scientific and social data are described as graphs. As a f
 
 In the context of graph analysis, the property graph model~\cite{angles} is becoming popular; various graph database engines, including Neo4j~\cite{neo4j}, Oracle Labs PGX~\cite{pgx}, and Amazon Neptune~\cite{neptune}, adopt this model. These graph database engines support algorithms for traversal or analyzing graphs. However, currently not many datasets are consistently described in the property graph model, so the application of these powerful engines are limited.
 
+Thus, transforming the RDF data into property graph model could be useful, but the transformation is not easy because of the differences in the data models. 
+In RDF, all information should be expressed in the subject-predicate-object form, whereas in the property graph model, each of the nodes and edges can have information in key-value form. 
+Although previous works addressed the issue of this transformation~\cite{hartig},
+the users could not define the mapping between two different data models.
+
 Here, we developed a framework based on the Graph to Graph Mapping Language (G2GML) for mapping RDF graphs to property graphs. Using this framework, accumulated graph data described in the RDF model can be converted to the property graph model and can be loaded to several graph database engines. 
 
 \section{Methods}
@@ -184,6 +189,9 @@ Sevenich, M., Hong, S., van Rest, O., Wu, Z., Banerjee, J., Chafi, H.: Using dom
 
 \bibitem{neptune}
 Amazon Neptune, \url{https://aws.amazon.com/neptune/}.
+
+\bibitem{hartig}
+Hartig, O.: Reconciliation of RDF* and property graphs. arXiv preprint arXiv:1409.3288 (2014)
 
 % \bibitem{ref_article1}
 % Author, F.: Article title. Journal \textbf{2}(5), 99--110 (2016)
