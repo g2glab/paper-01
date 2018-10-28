@@ -43,7 +43,7 @@ Database Center for Life Science, Chiba 277-0871, Japan\\
 \begin{abstract}
 % The abstract should briefly summarize the contents of the paper in 15--250 words.
 Increasing amounts of scientific and social data are published in the Resource Description Framework (RDF). Although the RDF data can be queried using the SPARQL language, even the SPARQL-based operation has a limitation in implementing traversal or analytical algorithms.
-Recently, a variety of graph database implementions dedicated to analyses on the property graph model have emerged.
+Recently, a variety of graph database implementations dedicated to analyses on the property graph model have emerged.
 However, the RDF model and the property graph model are not interoperable.
 Here, we developed a framework based on the Graph to Graph Mapping Language (G2GML) for mapping RDF graphs to property graphs to make the most of accumulated RDF data.
 Using this framework, graph data described in the RDF model can be converted to the property graph model and can be loaded to several graph database engines for further analysis. Future works include implementing and utilizing graph algorithms to make the most of the accumulated data in various analytical engines.
@@ -56,7 +56,7 @@ Using this framework, graph data described in the RDF model can be converted to 
 
 Increasing amounts of scientific and social data are described as graphs. As a format of graph data, the Resource Description Framework (RDF) is widely used. Although the RDF data can be queried using the SPARQL language in a flexible way, SPARQL is not dedicated to traversal of graphs and has a limitation in implementing graph analysis algorithms.
 
-In the context of graph analysis, the property graph model~\cite{angles} is becoming popular; various graph database engines, including Neo4j~\cite{neo4j}, Oracle Labs PGX~\cite{pgx}, and Amazon Neptune~\cite{neptune}, adopt this model. These graph database engines support algorithms for traversal or analyzing graphs. However, currently not many datasets are consistently described in the property graph model, so the application of thoese powerful engines are limited.
+In the context of graph analysis, the property graph model~\cite{angles} is becoming popular; various graph database engines, including Neo4j~\cite{neo4j}, Oracle Labs PGX~\cite{pgx}, and Amazon Neptune~\cite{neptune}, adopt this model. These graph database engines support algorithms for traversal or analyzing graphs. However, currently not many datasets are consistently described in the property graph model, so the application of these powerful engines are limited.
 
 Here, we developed a framework based on the Graph to Graph Mapping Language (G2GML) for mapping RDF graphs to property graphs. Using this framework, accumulated graph data described in the RDF model can be converted to the property graph model and can be loaded to several graph database engines. 
 
@@ -159,7 +159,7 @@ WHERE
 
 
 \section{Conclusion}
-In this work, we defined G2GML for mapping from RDF graphs to property graphs and implemented a converter based on the G2GML. We also showed an example usage of G2GML. Future works include further analysis of the converted graph data on the database engines adopting the property graph model.
+In this work, we defined G2GML for mapping RDF graphs to property graphs and implemented a converter based on the G2GML. We also showed an example usage of G2GML. Future works include further analysis of the converted graph data on the database engines adopting the property graph model.
 
 
 %
