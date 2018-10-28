@@ -54,14 +54,14 @@ Using this framework, graph data described in the RDF model can be converted to 
 \section{Introduction}
 % Please note that the first paragraph of a section or subsection is not indented. The first paragraph that follows a table, figure, equation etc. does not need an indent, either.
 
-Increasing amounts of scientific and social data are described as graphs. As a format of graph data, the Resource Description Framework (RDF) is widely used. Although the RDF data can be queried using the SPARQL language in a flexible way, SPARQL is not dedicated to traversal of graphs and has a limitation in implementing graph analysis algorithms.
+Increasing amounts of scientific and social data are described as graphs. As a format of graph data, the Resource Description Framework (RDF) is widely used. Although RDF data can be queried using the SPARQL language in a flexible way, SPARQL is not dedicated to traversal of graphs and has a limitation in implementing graph analysis algorithms.
 
 In the context of graph analysis, the property graph model~\cite{angles} is becoming popular; various graph database engines, including Neo4j~\cite{neo4j}, Oracle Labs PGX~\cite{pgx}, and Amazon Neptune~\cite{neptune}, adopt this model. These graph database engines support algorithms for traversal or analyzing graphs. However, currently not many datasets are consistently described in the property graph model, so the application of these powerful engines are limited.
 
-Thus, transforming the RDF data into property graph model could be useful, but the transformation is not easy because of the differences in the data models. 
-In RDF, all information should be expressed in the subject-predicate-object form, whereas in the property graph model, each of the nodes and edges can have information in key-value form. 
+Considering this situation, it is valuable to develop a method to transform RDF data into property graphs, but the transformation is not straightforward due to the differences in the data model. 
+In RDF, all information is expressed as the triple (node-edge-node), whereas in the property graph model, arbitrary information can be contained in each of the edges and nodes as key-value form. 
 Although previous works addressed the issue of this transformation~\cite{hartig},
-the users could not define the mapping between two different data models.
+the users cannot define the mapping between two different data models.
 
 Here, we developed a framework based on the Graph to Graph Mapping Language (G2GML) for mapping RDF graphs to property graphs. Using this framework, accumulated graph data described in the RDF model can be converted to the property graph model and can be loaded to several graph database engines. 
 
