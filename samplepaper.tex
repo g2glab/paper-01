@@ -96,7 +96,7 @@ For this conversion, the actual G2GML is described as in Figure~\ref{fig:g2gml}.
 
 \begin{figure}[!t]
 \vspace{2mm}
-\begin{small}
+\begin{scriptsize}
 \begin{verbatim}
 # Prefixes
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -107,17 +107,15 @@ PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
 # Node mapping
-(mus:Musician {vis_label:nam, born:dat, hometown:twn})
-    # Property graph pattern
-    ?mus rdf:type foaf:Person, dbpedia-owl:MusicalArtist .
+(mus:Musician {vis_label:nam, born:dat, hometown:twn})                    # PG Pattern
+    ?mus rdf:type foaf:Person, dbpedia-owl:MusicalArtist .                # RDF Pattern
     ?mus rdfs:label ?nam .
     OPTIONAL { ?mus prop:born ?dat }
     OPTIONAL { ?mus dbpedia-owl:hometown / rdfs:label ?twn }
 
 # Edge mapping
-(mus1:Musician)-[:same_group {label:nam, length:len}]->(mus2:Musician)
-    # Property graph pattern
-    ?grp a schema:MusicGroup ;
+(mus1:Musician)-[:same_group {label:nam, length:len}]->(mus2:Musician)    # PG Pattern
+    ?grp a schema:MusicGroup ;                                            # RDF Pattern
          dbpedia-owl:bandMember ?mus1 , ?mus2 .
     FILTER(?mus1 != ?mus2)
     OPTIONAL { ?grp rdfs:label ?nam. FILTER(lang(?nam) = "ja")}
@@ -132,7 +130,7 @@ Finally, Figure~\ref{fig:sparql} shows the SPARQL query to retrieve the pairs of
 
 \begin{figure}[!t]
 \vspace{2mm}
-\begin{small}
+\begin{scriptsize}
 \begin{verbatim}
 # SPARQL
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -185,7 +183,7 @@ Angles, R., Arenas, M., Barceló, P., Hogan, A., Reutter, J., Vrgoc, D.: Foundat
 The Neo4j Graph Platform, \url{https://neo4j.com/}.
 
 \bibitem{pgx}
-Sevenich, M., Hong, S., van Rest, O., Wu, Z., Banerjee, J., Chafi, H.: Using domain-specific languages for analytic graph databases. Proceedings of the VLDB Endowment 9(13), 1257--1268 (2016)
+Oracle Labs Parallel Graph AnalytiX (PGX), \url{https://www.oracle.com/technetwork/oracle-labs/parallel-graph-analytix/overview/index.html}
 
 \bibitem{neptune}
 Amazon Neptune, \url{https://aws.amazon.com/neptune/}.
