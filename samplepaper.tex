@@ -58,10 +58,10 @@ Increasing amounts of scientific and social data are described as graphs. As a f
 
 In the context of graph analysis, the property graph model~\cite{angles} is becoming popular; various graph database engines, including Neo4j~\cite{neo4j}, Oracle Labs PGX~\cite{pgx}, and Amazon Neptune~\cite{neptune}, adopt this model. These graph database engines support algorithms for traversal or analyzing graphs. However, currently not many datasets are consistently described in the property graph model, so the application of these powerful engines are limited.
 
-Considering this situation, it is valuable to develop a method to transform RDF data into property graphs, but the transformation is not straightforward due to the differences in the data model. 
-In RDF, all information is expressed as the triple (node-edge-node), whereas in property graphs, arbitrary information can be contained in each of the edges and nodes as key-value form. 
-Although previous works addressed the issue of this transformation~\cite{hartig},
-the users cannot define the mapping between two different data models.
+Considering this situation, it is valuable to develop a method to transform RDF data into property graphs. However, the transformation is not straightforward due to the differences in the data model. 
+In RDF graphs, all information is expressed as the triple (node-edge-node), whereas in property graphs, arbitrary information can be contained in each of the nodes and edges as key-value form. 
+Although previous works addressed this issue by formalizing transformations~\cite{hartig},
+users cannot define their specific mappings intended for each use case.
 
 Here, we developed a framework based on the Graph to Graph Mapping Language (G2GML) for mapping RDF graphs to property graphs. Using this framework, accumulated graph data described in the RDF model can be converted to the property graph model and can be loaded to several graph database engines. 
 
