@@ -150,10 +150,7 @@ WHERE {
 }
 
 # PGQL
-SELECT DISTINCT
-    m1.name, m2.name
-WHERE
-    (m1)-[same_group]-(m2)
+SELECT DISTINCT m1.name, m2.name WHERE (m1)-[same_group]-(m2)
 \end{verbatim}
 \end{small}
 \caption{SPARQL and PGQL}
